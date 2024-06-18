@@ -9,3 +9,8 @@ def file_handling():
       values = line.strip().split(',')
       int_values = [int(val) for val in values]
       lines.append(int_values)
+      
+    data_frame = np.array([np.array(row) for row in lines], dtype='object')
+    return data_frame  
+    
+    

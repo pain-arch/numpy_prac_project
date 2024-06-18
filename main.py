@@ -1,6 +1,5 @@
 import numpy as np
 
-
 def file_handling():
   #open the file in read mode
   lines = []
@@ -9,8 +8,12 @@ def file_handling():
       values = line.strip().split(',')
       int_values = [int(val) for val in values]
       lines.append(int_values)
-      
+
     data_frame = np.array([np.array(row) for row in lines], dtype='object')
-    return data_frame  
-    
-    
+    return data_frame
+
+def main():
+  data_frame = file_handling()
+  print(data_frame)
+
+main()

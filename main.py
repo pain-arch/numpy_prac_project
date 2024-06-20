@@ -1,4 +1,5 @@
 import numpy as np
+from operationclass import IntArray
 
 def file_handling():
   #open the file in read mode
@@ -16,4 +17,8 @@ def main():
   data_frame = file_handling()
   print(data_frame)
 
+  first_branch = IntArray(data_frame[0])
+  first_branch.display()
+  first_branch.salary()
+  
 main()

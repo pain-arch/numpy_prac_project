@@ -12,4 +12,7 @@ class IntArray:
     
   def salary(self):
     array_shape = self.int_array.shape
-    money_for_product
+    money_for_product = np.full(array_shape, 7)
+    salaries = self.int_array * money_for_products 
+    
+    print(f"People made {self.int_array} and this is their salaries {salaries}")

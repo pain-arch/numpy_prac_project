@@ -20,5 +20,6 @@ def main():
   first_branch = IntArray(data_frame[0])
   first_branch.display()
   first_branch.salary()
+  first_branch.show_data()
   
 main()

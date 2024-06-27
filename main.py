@@ -1,6 +1,26 @@
 import numpy as np
 from operationclass import IntArray
 
+def productivity_of_company(order, data_frame):
+  return np.sum(data_frame[order])
+
+
+# Function to find the company with the highest productivity
+def max_productivity(data_frame):
+  i = 0
+  best_company = i + 1
+  num_of_products = 0
+
+  for i in range(len(data_frame)):
+    result = productivity_of_company(i, data_frame)
+    if result > num_of_products:
+      num_of_products = result
+      best_company = i + 1
+  print(f"Company {best_company} is the best with {num_of_products} products")    
+
+
+
+
 def file_handling():
   #open the file in read mode
   lines = []

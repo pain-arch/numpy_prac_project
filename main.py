@@ -44,6 +44,27 @@ def file_handling():
     data_frame = np.array([np.array(row) for row in lines], dtype='object')
     return data_frame
 
+
+def mean_products(data_frame):
+  for i in range(len(data_frame)):
+    average = np.mean(data_frame[i])
+    print(f"On average, one employee from {i+1}, company produced {average} products")
+
+  sum_products = 0 
+  num_employee = 0
+
+  for row in data_frame:
+    for employee in row:
+      num_employee += 1
+
+  for row in range(len(data_frame)):
+    row_sum = np.sum(data_frame[row])
+    sum_products += row_sum
+
+  total_mean = sum_products / num_employee
+  print(f"The total average of all employees is {total_mean}")  
+
+
 def main():
   data_frame = file_handling()
   print(data_frame)
@@ -53,6 +74,8 @@ def main():
   first_branch.salary()
   first_branch.show_data()
 
-
+  max_productivity(data_frame)
+  min_productivity(data_frame)
+  mean_products(data_frame)
   
 main()

@@ -21,6 +21,10 @@ class IntArray:
   def show_data(self):
     x = np.arange(len(self.int_array))
     plt.plot(x, self.int_array, marker='o')
+    plt.title('Productivity of employees')
+    plt.xlabel('rank of employee')
+    plt.ylabel('products/month')
+    plt.xticks(x)
     plt.grid()
     plt.show()
        

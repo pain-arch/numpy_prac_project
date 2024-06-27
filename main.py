@@ -18,7 +18,18 @@ def max_productivity(data_frame):
       best_company = i + 1
   print(f"Company {best_company} is the best with {num_of_products} products")    
 
+# Function to find the company with the lowest productivity
+def min_productivity(data_frame):
+  i = 0
+  worst_company = i + 1
+  num_of_products = productivity_of_company(0, data_frame)
 
+  for i in range(len(data_frame)):
+    result = productivity_of_company(i, data_frame)
+    if result <= num_of_products:
+      num_of_products = result
+      worst_company = i + 1
+  print(f"Company {worst_company} is the worst with {num_of_products} products")
 
 
 def file_handling():
@@ -41,5 +52,7 @@ def main():
   first_branch.display()
   first_branch.salary()
   first_branch.show_data()
+
+
   
 main()
